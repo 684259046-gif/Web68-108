@@ -7,10 +7,15 @@
     <title>Web.Workshop : 684259046</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body{
           font-family: Verdana, Geneva, Tahoma, sans-serif;
           margin: 25px;
           padding: 0 ;
+          background-color: rgb(255, 154, 247);
+          line-height: 1.5;
 
         }
 
@@ -19,20 +24,34 @@
         }
 
           h2{
-            color: palevioletred;
+            color: rgb(129, 19, 219);
           }
           .green-text {
             color: green;
           }
 
-          pre{
-            background-color: aquamarine;
-            border-left: 5px solid rgb(0, 36, 199);
+          pre {
+            background-color: rgb(240, 59, 201);
+            border-left: 5px solid rgb(61, 161, 243);
             font-size: 15px;
             padding-top: 5px;
             font-size: 16px;
 
+            white-space: pre-wrap;
+            border-radius: 10px;
+            
           }
+          a {
+            text-decoration-line: none;
+        }
+          a:hover {
+            text-decoration-line: underline;
+            color : rgb(255, 0, 0)
+        }
+
+        .text-center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +71,6 @@
     <li><a href="#adding-images">Adding Images</a></li>
     <li><a href="#creating-tables">Creating Tables</a></li>
     <li><a href="#html-forms">HTML Forms</a></li>
-    <li><a href="#multimedia">Embedding Multimedia (Audio &amp; Video)</a></li>
     <li><a href="#semantic">Semantic HTML</a></li>
     <li><a href="#workshop">Workshop</a></li>
 </ul>
@@ -107,8 +125,8 @@
 <!-- Heading -->
 <section>
     <h2 id="heading">Heading</h2>
-    <p>workshop</p>
     <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
+    <p><a href="W03-heading.html">workshop</p>
     <pre>
     - &lt;h1&gt;: Heading 1
     - &lt;h2&gt;: Heading 2
@@ -411,12 +429,13 @@
     </ul>
     <a href="#top">TOP</a>
     <hr>
-    <a href="https://www.w3schools.com/" target="_blank">Learn more about HTML</a>
+    <div class="text-center">
+        <a href="https://www.w3schools.com/" >Learn more about HTML</a>
+        
+        <footer>
+        <p >&copy; 2026 HTML Tutorial by Thanaboon Wongwes</p>
+        </footer>
+    </div>
 </section>
-
-<footer>
-    <p>&copy; 2024 HTML Tutorial by Suksawat Saelim</p>
-</footer>
-
 </body>
 </html>
