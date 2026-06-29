@@ -3,101 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Heding workshop</title>
+</head>
     <style>
-        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
+            background-color: rgb(222, 169, 233);
+        }
+
+        header {
+            background: linear-gradient(90deg,rgb(210, 97, 238),rgb(205, 57, 241),rgb(204, 0, 255),rgb(205, 57, 241), rgb(210, 97, 238));
+            padding: 30px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 8px;
         }
 
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-
-        h1 {
-            text-align: center;
-            color: #c4005a;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 25px 30px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            border-top: 4px solid #c4005a;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        ul {
-            margin-top: 10px;
-        }
-
-        pre {
-            background: #f0f0f0;
-            padding: 12px;
-            border-left: 4px solid #c4005a;
-            overflow-x: auto;
-            border-radius: 6px;
-            font-size: 14px;
-        }
-
-        .note {
-            border-left: 4px solid #e0e0e0;
-            padding-left: 12px;
-            margin-top: 12px;
-            color: #666;
-        }
-
-        .note::before {
-            content: "💡 ";
-            display: inline-block;
-            margin-right: 6px;
-            font-size: 20px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-top: 15px;
-            text-decoration: none;
-            color: #0066cc;
+        .text-title {
+            font-size: 25px;
             font-weight: bold;
         }
 
-        .back-link:hover {
+        .text-center {
+            text-align: center;
+        }
+
+        .card {
+            background-color:rgb(252, 162, 247);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px black;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color:rgb(255, 255, 255);
+            padding:10px;
+            border-radius:5px;
+            border-top: 5px solid rgb(100, 97, 97);
+            border-bottom: 5px solid rgb(100, 97, 97);
+        }
+
+        .note {
+            border-left: 4px solid rgb(243, 146, 243);
+            background-color: rgb(234, 220, 241);
+        }
+
+                .note::before {
+                    content:"💩";
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover {
             text-decoration: underline;
         }
 
-        /* Card 2 heading sizes */
-        .card-examples h1 { font-size: 2em; text-align: left; margin-bottom: 5px; }
-        .card-examples h2 { font-size: 1.5em; }
-        .card-examples h3 { font-size: 1.17em; }
-        .card-examples h4 { font-size: 1em; }
-        .card-examples h5 { font-size: 0.83em; }
-        .card-examples h6 { font-size: 0.67em; }
+        .hero {
+            padding: 50px 0;
+        }
+
+        .hero-text-h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color:rgb(43, 43, 122);
+        }
+        .hero-text-p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color:rgb(84, 84, 94);
+        }
+        .h1-label {background: blue}
+        .h2-label {background: red;}
+
+        
     </style>
-    </style>
-</head>
 <body>
-    <h1>Workshop: HTML Heading</h1>
-    <p>ฝึกใช้แท็ก <h1> – <h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+    <header>
+        <p class="text-title">เรียนรู้เว็บเบื้องต้น</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+
+    
+    <div class="container">
+    <section class="hero">
+        <h1 class="hero-text-h1">แบบฝึกปฏิบัติ HTML Heading</h1>
+        <p class="hero-text-p">ฝึกใช้แท็ก &lt;h1> - &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+    </section>
+    <div class="card">
         <h2>1. ความหมายของ Headings (H1–H6)</h2>
         <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
         <ul>
@@ -108,26 +117,33 @@
             <li>H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
             <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
         </ul>
-<p>H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
-<h2> ตัวอย่างการใช ้H1–H6</h2>
+        <p class="note">💡H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+    </div>
+</div>
 
-<pre>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
- &lt;h2&gt;HTML Basics&lt;/h2&gt;
- &lt;h3&gt;What is HTML?&lt;/h3&gt;
- &lt;h4&gt;HTML Syntax&lt;/h4&gt;
- &lt;h5&gt;Example Code&lt;/h5&gt;
- &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;</pre>
 
-<p>เมือใช้แสดงผลจะได้ขนาดลดหลั่นแบบนี้</p>
-        <h1>H1: Welcome to My Website</h1>
-        <h2>H2: HTML Basics</h2>
-        <h3>H3: What is HTML?</h3>
-        <h4>H4: HTML Syntax</h4>
-        <h5>H5: Example Code</h5>
-        <h6>H6: Note about heading size</h6>
-    </section>
-<a href="index.html">🏠Back To Home</a>
+    <div class="container">
+        <div class="card">
+            <h2>2.ตัวอยา่งการใช ้H1–H6</h2>
+            <pre>t;h1&gt;Welcome to My Website&lt;/h1&gt;
+                &lt;h2&gt;HTML Basics&lt;/h2&gt;
+                &lt;h3&gt;What is HTML?&lt;/h3&gt;
+                &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+                &lt;h5&gt;Example Code&lt;/h5&gt;
+                &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;</pre>
+                    <P class="note">เมื่อแสดงผลจะได้ลดหลั่นแบบนี้</P>
+    <h1>H1:Welcome to My Website</h1>
+    <h2>H2:HTML Basics</h2>
+    <h3>H3:What is HTML?</h3>
+    <h4>H4:HTML Syntax</h4>
+    <h5>H5:Example Code</h5>
+    <h6>H^:Note: Case Sensitive</h6>
+        </div>
+    </div>
 
+
+
+    <P class="text-center"><a href="index.html">🏠Back to Home</a>    </p>
+    
 </body>
 </html>
-
