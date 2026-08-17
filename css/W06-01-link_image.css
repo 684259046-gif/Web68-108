@@ -11,23 +11,10 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  /* border: 1px solid rgb(0, 4, 253);
-        padding: 15px;
-        margin: 15px; */
-}
-
-/* ====================
-            Header
-    =======================*/
+/* ==================== Header ======================= */
 
 .site-header {
-  /* border: 1px solid rgb(253, 0, 0);
-        padding: 15px;
-        margin: 15px; */
-
   background: linear-gradient(90deg, rgb(230, 62, 199), rgb(101, 57, 231));
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,10 +22,6 @@ body {
 }
 
 .brand {
-  /* border: 1px solid rgb(118, 0, 253);
-        padding: 15px;
-        margin: 15px; */
-
   display: flex;
   align-items: center;
   gap: 15px;
@@ -47,14 +30,11 @@ body {
 
 .brand-icon {
   background-color: white;
-
   width: 65px;
   height: 65px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 50%;
   border: 5px solid red;
   font-size: 35px;
@@ -69,12 +49,6 @@ body {
   opacity: 0.75;
 }
 
-.main-nav {
-  /* border: 1px solid rgb(3, 247, 214);
-  padding: 15px;
-  margin: 15px; */
-}
-
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -85,7 +59,6 @@ body {
 .nav-list a {
   color: white;
   text-decoration: none;
-
   padding: 12px 16px;
   border-radius: 8px;
   transition: all 0.5s;
@@ -95,38 +68,23 @@ body {
   background-color: rgba(255, 255, 255, 0.336);
 }
 
-/* ====================
-        main-layout
-    =======================*/
+/* ==================== Main Layout ======================= */
+
 .main-layout {
-  /* border: 1px solid rgb(253, 249, 0);
-  padding: 15px;
-  margin: 15px; */
   padding: 20px 22px 0px;
   display: grid;
   grid-template-columns: 1fr 390px;
 }
 
-/* ====================
-        Left-content
-    =======================*/
-
 .left-content {
-  /* border: 1px solid rgb(253, 0, 211);
-  padding: 15px;
-  margin: 15px; */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/*== hero ==*/
+/* ==================== Hero ======================= */
 
 .hero {
-  /* border: 1px solid rgb(0, 25, 253);
-  padding: 15px;
-  margin: 15px; */
-
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
   background: linear-gradient(100deg, rgb(236, 149, 220), rgb(247, 76, 210));
@@ -142,44 +100,161 @@ body {
   font-size: 36px;
   color: white;
 }
+
 .hero-text p {
   font-size: 21px;
   color: rgba(255, 255, 255, 0.774);
 }
 
 .hero-photo img {
-  width: 400px;
-  height: 200px;
-  border: 3px solid rgb(100, 1, 192);
-  /* object-fit: contain; */
-  /* object-fit: fill; */
-  /* object-fit: cover; */
-  border-radius: 12px;
+  width: 40%;
+  height: 30%;
+  object-fit: contain; /* ช่วยให้เห็นรูปครบทั้งใบ ไม่โดนตัดขอบ */
+  transform: rotate(
+    -90deg
+  ); /* หมุนรูปทวนเข็มนาฬิกา 90 องศา (ถ้ายังหมุนผิดฝั่งให้เปลี่ยนเป็น 90deg) */
+  border: 1px solid rgb(100, 1, 192);
+  border-radius: 15px;
 }
 
-/*== link examle ==*/
+/* ==================== Cards (Link & Image) ======================= */
 
 .card {
-  border: 1px solid rgb(0, 25, 253);
-  padding: 15px;
-  margin: 15px;
+  background: linear-gradient(100deg, rgb(236, 149, 220), rgb(247, 76, 210));
+  border-radius: 12px;
+  padding: 24px 36px;
+  box-shadow: 0 4px 12px white;
 }
 
-/*== image examle ==*/
+.card-header-title {
+  display: flex;
+  gap: 10px;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  margin-bottom: 15px;
+}
 
-/* ====================
-        Right-sidebar
-    =======================*/
+.card-body-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 15px;
+}
 
+/* Panels */
+.result-panel,
+.code-panel {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.result-panel-title {
+  background-color: rgb(252, 196, 245);
+  padding: 6px 15px;
+  font-weight: bold;
+}
+
+.result-panel-body {
+  padding: 15px;
+}
+
+.result-panel-body a {
+  display: block;
+  color: rgb(25, 94, 241);
+}
+
+.result-panel-body a:hover {
+  text-decoration: none;
+  color: rgb(255, 0, 221);
+}
+
+.mail-icon {
+  background-color: rgb(25, 94, 241);
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+
+.back-botton {
+  border: 2px solid rgb(25, 94, 241);
+  border-radius: 5px;
+  padding: 4px 15px;
+  margin-top: 10px;
+  display: inline-block !important;
+  text-decoration: none;
+}
+
+/* Code Panel Right */
+.code-panel-body {
+  background-color: black;
+  height: 100%;
+}
+
+.code-list {
+  color: white;
+  padding: 10px 30px;
+}
+
+.code-list li {
+  padding: 0px 25px;
+}
+
+.tag {
+  color: #ff5555;
+}
+
+.attr {
+  color: #f1fa8c;
+}
+
+.value {
+  color: #50fa7b;
+}
+
+/* Image Grid Styling */
+.image-grid {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.image-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-box {
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+/* Sidebar & Tip-box */
 .right-sidebar {
   border: 1px solid rgb(253, 0, 211);
   padding: 15px;
   margin: 15px;
 }
 
-/* ====================
-        Tip-box
-    =======================*/
 .tip-box {
   border: 1px solid rgb(42, 253, 0);
   padding: 15px;

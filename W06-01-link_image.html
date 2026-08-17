@@ -10,9 +10,8 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -27,17 +26,16 @@
                 </div>
             </div>
 
-        <!-- main-nav -->
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="">🏠Home</a></li>
-                <li><a href="">🤯Heading</a></li>
-                <li><a href="">🔐Formating</a></li>
-                <li><a href="">🔗Link and Image</a></li>
-                <li><a href="">📓Practice</a></li>
-            </ul>
-        </nav>
- 
+            <!-- main-nav -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="">🏠Home</a></li>
+                    <li><a href="">🤯Heading</a></li>
+                    <li><a href="">🔐Formating</a></li>
+                    <li><a href="">🔗Link and Image</a></li>
+                    <li><a href="">📓Practice</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main class="main-layout">
@@ -45,24 +43,135 @@
                 <!-- Hero section -->
                 <section class="hero">
                     <div class="hero-text">
-<h1>
-    แบบฝึกปฏิบัติ: HTML Link และ Image
-</h1>
-<p>
-    เรียนรู้การสร้างลิงก์และการแทรกรูปภาพด้วยแท็ก HTML <br> พร้อมด้วยตัวอย่างและการตกแต่งด้วย CSS
-</p>
-
-</div>
+                        <h1>แบบฝึกปฏิบัติ: HTML Link และ Image</h1>
+                        <p>เรียนรู้การสร้างลิงก์และการแทรกรูปภาพด้วยแท็ก HTML <br> พร้อมด้วยตัวอย่างและการตกแต่งด้วย CSS</p>
+                    </div>
                     <div class="hero-photo">
-                        <img src="images.jfif" alt="Sigma boy">
+                        <img src="Scottish-Straight-Cat-4.jpg" alt="Scottish-Straight-Cat">
                     </div>
                 </section>
 
-                <!-- Link examle -->
-                <article class="card"></article>
+                <!-- Link example -->
+                <article class="card">
+                    <div class="card-header-title">
+                        <span>🔗</span>
+                        <h2>ตัวอย่างลิงก์ (Link Example)</h2>
+                    </div>
+                    <div class="card-body-grid">
+                        <!-- left box -->
+                        <div class="result-panel">
+                            <div class="result-panel-title">ผลลัพธ์</div>
+                            <div class="result-panel-body">
+                                <a href="https://www.npru.ac.th">ไปยังเว็บไซต์มหาวิทยาลัย</a>
+                                <a href="https://www.google.com" target="_blank">เปิด Google ในแท็บใหม่ </a>
 
-                <!-- Image examle -->
-                <article class="card"></article>
+                                <div style="display: flex; gap: 10px; align-items: center;">
+                                    <span class="mail-icon">📧</span>
+                                    <a href="mailto:teacher@example.com"> ส่งอีเมลถึงผู้สอน</a>
+                                </div>
+
+                                <a href="index.html" class="back-botton">← กลับไปหน้าแรก</a>
+                            </div>
+                        </div>
+
+                        <!-- right box -->
+                        <div class="code-panel">
+                            <div class="result-panel-title">โค้ด HTML</div>
+                            <div class="code-panel-body">
+                                <ol class="code-list">
+                                    <li>
+                                        <span class="tag">&lt;a</span>
+                                        <span class="attr">href</span>=<span class="value">"https://www.npru.ac.th"</span>
+                                        <span class="tag">&gt;</span>เว็บไซต์มหาวิทยาลัย<span class="tag">&lt;/a&gt;</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag">&lt;a</span>
+                                        <span class="attr">href</span>=<span class="value">"https://www.google.com"</span>
+                                        <span class="attr">target</span>=<span class="value">"_blank"</span>
+                                        <span class="tag">&gt;</span>เปิด Google ในแท็บใหม่<span class="tag">&lt;/a&gt;</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"mailto:teacher@example.com"</span><span class="tag">&gt;</span>ส่งอีเมล<span class="tag">&lt;/a&gt;</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"index.html"</span><span class="tag">&gt;</span>กลับหน้าแรก<span class="tag">&lt;/a&gt;</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Image example -->
+                <article class="card">
+                    <div class="card-header-title">
+                        <span>📸</span>
+                        <h2>ตัวอย่างรูปภาพ (Image Example)</h2>
+                    </div>
+                    <div class="card-body-grid">
+                        <!-- left box -->
+                        <div class="result-panel">
+                            <div class="result-panel-title">ผลลัพธ์</div>
+                            <div class="result-panel-body">
+                                <div class="image-grid">
+                                    <!-- รายการที่ 1 -->
+                                    <div class="image-item">
+                                        <div class="img-box">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbzD6YwJWXykhMPIjzG-3H0eMRX-YTMbx0gif-W9H8A&s=10" alt="" width="100">
+                                        </div>
+                                        <p class="caption">โลโก้มหาวิทยาลัย</p>
+                                    </div>
+
+                                    <!-- รายการที่ 2 -->
+                                    <div class="image-item">
+                                        <div class="img-box">
+                                            <img src="https://sc.npru.ac.th/sc_npru_new/assets/attach/activity/1673275115_0e3aefdc816488d6c9e2.jpg" alt=""width="100">
+                                        </div>
+                                        <p class="caption">นักศึกษาSE</p>
+                                    </div>
+
+                                    <!-- รายการที่ 3 -->
+                                    <div class="image-item">
+                                        <div class="img-box">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2LBzF0p9LN4T2lIoNRW3hP1IxBtMaJDDN9Q_kNU6nDw&s=10" alt=""width="100">
+                                        </div>
+                                        <p class="caption">โลโก้ SE</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- right box -->
+                        <div class="code-panel">
+                            <div class="result-panel-title">โค้ด HTML</div>
+                            <div class="code-panel-body">
+                                <ol class="code-list">
+                                    <li>
+                                        <span class="tag">&lt;img</span>
+                                        <span class="attr">src</span>=<span class="value">"images/campus.jpg"</span>
+                                        <span class="attr">alt</span>=<span class="value">"ภาพมหาวิทยาลัย"</span>
+                                        <span class="attr">width</span>=<span class="value">"220"</span>
+                                        <span class="tag">&gt;</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag">&lt;img</span>
+                                        <span class="attr">src</span>=<span class="value">"images/student.jpg"</span>
+                                        <span class="attr">alt</span>=<span class="value">"นักศึกษากำลังเรียน"</span>
+                                        <span class="attr">width</span>=<span class="value">"180"</span>
+                                        <span class="tag">&gt;</span>
+                                    </li>
+                                    <li>
+                                        <span class="tag">&lt;img</span>
+                                        <span class="attr">src</span>=<span class="value">"images/logo.png"</span>
+                                        <span class="attr">alt</span>=<span class="value">"โลโก้วิชา"</span>
+                                        <span class="attr">height</span>=<span class="value">"80"</span>
+                                        <span class="tag">&gt;</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </section>
 
             <section class="right-sidebar">Sidebar</section>
@@ -70,6 +179,5 @@
 
         <footer class="tip-box">tip-box</footer>
     </div>
-    
 </body>
 </html>
