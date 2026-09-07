@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  /*  สีพื้นหลัง */
+  --header-background-color: rgb(248, 179, 238);
+  --light-bachground-color: rgb(255, 206, 248);
+  --footer-background-color: black;
+
+  /* สีเงา */
+  --header-shadow: 0 3px 10px rgb(177, 177, 177);
+  --card-shadow: 0 3px 10px rgb(214, 214, 214);
+
+  /* สีหลักของเว็บ */
+  --primary-color: rgb(253, 91, 205);
+  --primary-dark-color: rgb(255, 125, 212);
+  --secondary-color: blue;
+
+  /* สีข้อความ */
+  --mute-text-color: gray;
+  --nav-text-color: black;
+  --light-text-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(250, 225, 240);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/*==========================
+            Header
+============================*/
+.header {
+  background-color: #fc93e2fa;
+  box-shadow: var(--header-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 50px;
+  backdrop-filter: blur(10);
+}
+
+.header-content {
+  text-align: center;
+  padding-block: 2rem;
+}
+
+.header-title {
+  color: var(--primary-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.header-subtitle {
+  color: var(--mute-text-color);
+}
+
+/*==========================
+            Navbar
+============================*/
+nav {
+  padding-block: 2rem;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+  background: var(--light-bachground-color);
+  padding: 0.65rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 999px;
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+  transition:
+    transfrom 1.4s,
+    boxshadow 1.4s;
+  display: inline-block;
+  user-select: none;
+}
+
+nav a.active {
+  background-color: rgb(255, 186, 186);
+  color: var(--light-text-color);
+}
+
+nav a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgb(255, 255, 255);
+}
+
+/*==========================
+            Main
+============================*/
+.page-title {
+  text-align: center;
+  margin: 25px;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.pet-card {
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transfrom 2.5s;
+}
+
+.pet-card:hover {
+  transform: translateY(-4px);
+}
+
+.pet-card img {
+  height: 16.25rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pet-content {
+  padding: 1.25rem;
+}
+
+.pet-content h2 {
+  color: var(--primary-dark-color);
+}
+
+.breed {
+  color: var(--mute-text-color);
+}
+
+/*==========================
+            Footer
+============================*/
+footer {
+  padding-block: 2rem;
+  background-color: var(--footer-background-color);
+  margin-top: 1.5rem;
+  color: var(--light-text-color);
+  text-align: center;
+}
