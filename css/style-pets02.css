@@ -9,12 +9,12 @@
   --header-background-color: #ffffff;
   --light-bachground-color: #ffe3f1;
   --footer-background-color: #d6336c;
+  --btn-bg-color: rgb(216, 216, 216);
 
   /* สีเงา */
   --header-shadow: 0 3px 10px rgba(255, 105, 180, 0.2);
   --card-shadow: 0 3px 10px rgba(255, 105, 180, 0.15);
-
-  /* สีหลักของเว็บ */
+  --bordor-color: rgb(194, 194, 194); /* สีหลักของเว็บ */
   --primary-color: #ff4fa3;
   --primary-dark-color: #d6336c;
   --secondary-color: #ff85c2;
@@ -23,6 +23,7 @@
   --mute-text-color: gray;
   --nav-text-color: #d6336c;
   --light-text-color: white;
+  --dark-text-color: black;
 
   /* สีการ์ดคำแนะนำ */
   --info-blue-bg: #e3f0ff;
@@ -80,13 +81,12 @@ body {
 /*==========================
             Navbar
 ============================*/
-nav {
+.catagory-nav {
   padding-block: 2rem;
   text-align: center;
 }
 
-nav a {
-  text-decoration: none;
+.catagory-nav label {
   color: var(--nav-text-color);
   background: var(--light-bachground-color);
   padding: 0.65rem 1.2rem;
@@ -101,14 +101,77 @@ nav a {
   user-select: none;
 }
 
-nav a.active {
-  background-color: var(--primary-color);
+.catagory-nav label:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+}
+
+.filter-radio {
+  /* display: none; */
+
+  /* ซ้อน Radio */
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+}
+
+#filter-all:checked ~ .catagory-nav label[for="filter-all"],
+#filter-dog:checked ~ .catagory-nav label[for="filter-dog"],
+#filter-cat:checked ~ .catagory-nav label[for="filter-cat"],
+#filter-bird:checked ~ .catagory-nav label[for="filter-bird"],
+#filter-fish:checked ~ .catagory-nav label[for="filter-fish"],
+#filter-smallpet:checked ~ .catagory-nav label[for="filter-smallpet"] {
+  background-color: var(--secondary-color);
   color: var(--light-text-color);
 }
 
-nav a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+.catagory-title {
+  display: none;
+}
+
+#filter-all:checked ~ main .title-all,
+#filter-dog:checked ~ main .title-dog,
+#filter-cat:checked ~ main .title-cat,
+#filter-bird:checked ~ main .title-bird,
+#filter-fish:checked ~ main .title-fish,
+#filter-smallpet:checked ~ main .title-smallpet {
+  display: inline;
+}
+
+/*==========================
+            ซ่อนแสดงภาพสัตว์
+============================*/
+#filter-dog:checked ~ main .pet-card {
+  display: none;
+}
+#filter-dog:checked ~ main .pet-dog {
+  display: block;
+}
+#filter-cat:checked ~ main .pet-card {
+  display: none;
+}
+#filter-cat:checked ~ main .pet-cat {
+  display: block;
+}
+#filter-bird:checked ~ main .pet-card {
+  display: none;
+}
+#filter-bird:checked ~ main .pet-bird {
+  display: block;
+}
+#filter-fish:checked ~ main .pet-card {
+  display: none;
+}
+#filter-fish:checked ~ main .pet-fish {
+  display: block;
+}
+#filter-smallpet:checked ~ main .pet-card {
+  display: none;
+}
+#filter-smallpet:checked ~ main .pet-smallpet {
+  display: block;
 }
 
 /*==========================
@@ -117,6 +180,7 @@ nav a:hover {
 .page-title {
   text-align: center;
   margin: 25px;
+  color: var(--primary-color);
 }
 
 .pet-grid {
@@ -171,6 +235,7 @@ nav a:hover {
 .info-title {
   text-align: center;
   margin-bottom: 1.5rem;
+  color: var(--primary-color);
 }
 
 .info-grid {
@@ -238,7 +303,67 @@ nav a:hover {
     grid-template-columns: 1fr;
   }
 }
+/*==========================
+            Learning Form
+============================*/
+.form-section {
+  background-color: white;
+  box-shadow: var(--card-shadow);
+  border-radius: 16px;
+  padding: 1.5rem 2rem 2rem;
+  margin: 2rem 0 3rem;
+  border: 1px solid var(--light-bachground-color);
+}
 
+.form-section h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.form-section p {
+  text-align: center;
+  color: var(--mute-text-color);
+}
+
+.form-section fieldset {
+  padding: 1.5rem;
+  border: 1px solid var(--bordor-color);
+  border-radius: 0.75rem;
+}
+
+.form-section legend {
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.radio-option {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.radio-item {
+}
+
+.radio-item input {
+  accent-color: var(--info-purple-title);
+}
+
+.radio-item label {
+  background-color: var(--btn-bg-color);
+  color: var(--dark-text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.radio-item input:checked + label {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
 /*==========================
             Footer
 ============================*/
