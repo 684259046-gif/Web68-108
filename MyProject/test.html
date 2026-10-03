@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - แนะนำตัวเอง</title>
+    <link rel="stylesheet" href="test.css">
+
+</head>
+<body>
+
+    <!-- 1. NAVBAR (ฝึก Flexbox & Responsive) -->
+    <nav class="navbar">
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#hero">หน้าแรก</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. HERO SECTION (ฝึก Grid, Display & Button Full-width) -->
+    <section id="hero" class="hero-section">
+        <div class="hero-text">
+            <h1>สวัสดีครับ ผมชื่อ ธนบูลย์ วงค์เวช(ฟลุ๊ค)</h1>
+            <p>ยินดีต้อนรับสู่เว็บแนะนำตัวเอง! ผมกำลังศึกษาสาขาวิศวกรรมซอฟแวร์ ชอบพัฒนาเว็บไซต์และเรียนรู้สิ่งใหม่ๆ</p>
+            
+            <!-- ฝึก Display: inline-block และ block -->
+            <a href="#skills" class="btn btn-inline">ทักษะของผม</a>
+            <a href="#contact" class="btn btn-full">ติดต่อผมทันที</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/350x350" alt="รูปโปรไฟล์ของคุณ">
+        </div>
+    </section>
+
+    <!-- 3. CARD SECTION (ฝึก CSS Grid & Responsive Cards) -->
+    <section id="skills" class="card-section">
+        <h2>ทักษะและความสามารถ (My Skills)</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>สามารถออกแบบและจัด Layout หน้าเว็บให้รองรับการแสดงผลบนทุกอุปกรณ์ (Responsive Design)</p>
+            </div>
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>สร้างลูกเล่นและความ interactivity พื้นฐานให้กับหน้าเว็บได้</p>
+            </div>
+            <div class="card">
+                <h3>Git & GitHub</h3>
+                <p>ใช้งาน Git ในการจัดการเวอร์ชันของโค้ด และ Push งานขึ้น GitHub Repository ได้อย่างคล่องแคล่ว</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FORM SECTION (ฝึก Input Types, Placeholder, Required, Radio & Responsive Form Grid) -->
+    <section id="contact" class="form-section">
+        <h2>ส่งข้อความหาผมได้ที่ด้านล่างนี้ ⬇️ (Contact Me)</h2>
+        <form class="contact-form">
+            <!-- แบ่งเป็น 2 คอลัมน์บน Desktop / 1 คอลัมน์บน Mobile -->
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fname">ชื่อของคุณ:</label>
+                    <input type="text" id="fname" placeholder="กรอกชื่อ-นามสกุล" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">อีเมลติดต่อ:</label>
+                    <input type="email" id="email" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group gender-group">
+                <label>สถานะผู้ติดต่อ:</label>
+                <label><input type="radio" name="status" value="student" required> นักศึกษา</label>
+                <label><input type="radio" name="status" value="general"> บุคคลทั่วไป</label>
+            </div>
+
+            <!-- ปุ่ม Submit ยืดเต็มความกว้าง -->
+            <button type="submit" class="btn btn-submit">ส่งข้อความ</button>
+        </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 เทสระบบก่อนสอบ</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* ==========================================
+   1. NAVBAR (Flexbox)
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* จัดซ้าย-ขวา-กระจาย */
+    align-items: center;
+    background: linear-gradient(135deg, pink,rgb(96, 168, 250));
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #000000;
+}
+
+/* ==========================================
+   2. HERO SECTION (Grid & Display)
+   ========================================== */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่ง 2 คอลัมน์ */
+    gap: 30px;
+    padding: 4rem 2rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%; /* ทำรูปวงกลม */
+    display: block;
+    margin: 0 auto;
+}
+
+/* สไตล์ปุ่มกด */
+.btn {
+    border: none;
+    padding: 12px 24px;
+    background-color: #ff9ee7;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff7edf;
+}
+
+.btn-inline {
+    display: inline-block; /* ยึดขนาดตามเนื้อหา */
+    text-decoration: none;
+}
+
+.btn-full {
+    display: block;        /* กินพื้นที่เต็มบรรทัด */
+    width: 100%;           /* ยืดเต็มความกว้าง */
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* ==========================================
+   3. CARD SECTION (Grid)
+   ========================================== */
+.card-section {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.card-section h2 {
+    margin-bottom: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 คอลัมน์บน Desktop */
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+
+.card {
+    background:linear-gradient(135deg, pink, rgb(96, 168, 250));
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.card p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    
+}
+
+/* ==========================================
+   4. FORM SECTION
+   ========================================== */
+.form-section {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่ง Input Text เป็น 2 คอลัมน์ */
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%; /* ยืดเต็มความกว้าง */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.gender-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    width: 100%;
+    background:linear-gradient(135deg, pink, rgb(96, 168, 250));
+    margin-top: 10px;
+}
+
+/* ==========================================
+   5. MEDIA QUERIES (Desktop / Tablet / Mobile)
+   ========================================== */
+
+/* แท็บเล็ต (Tablet: ความกว้างไม่เกิน 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ */
+        text-align: center;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* การ์ดเหลือ 2 คอลัมน์ */
+    }
+}
+
+/* มือถือ (Mobile: ความกว้างไม่เกิน 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* ปรับ Navbar เป็นแนวตั้ง */
+        gap: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* ปรับ Form Input เป็น 1 คอลัมน์ */
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* การ์ดเหลือ 1 คอลัมน์ */
+    }
+}
