@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', 'Prompt', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #5c4048; /* สีน้ำตาลช็อกโกแลตเข้ม อ่านง่ายและละมุน */
+    background-color: #fff5f8; /* สีครีมชมพูอ่อนสไตล์สตอเบอร์รี่มิลค์เชค */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   2. HEADER & NAVIGATION[cite: 1, 3]
+   =================================================== */
+header {
+    background-color: #fde8ed; /* สีชมพูพาสเทลนุ่มนวล */
+    color: #5c4048;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #fbcfe8; /* เส้นขอบขอบขนมหวาน */
+    box-shadow: 0 4px 10px rgba(244, 114, 182, 0.15);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #db2777; /* ชมพูเข้มสว่างเหมือนไอซิ่ง */
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+nav a {
+    color: #835261;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px; /* มุมมนเหมือนมาการอง */
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class :hover[cite: 3, 5] */
+nav a:hover {
+    color: #9d174d;
+    background-color: #fbcfe8; /* ชมพูนมเย็นยามเลื่อนเมาส์ผ่าน */
+}
+
+/* แสดงหน้าปัจจุบัน active[cite: 1] */
+nav a.active {
+    color: #ffffff;
+    background-color: #f472b6; /* ชมพูหวานโดดเด่น */
+    box-shadow: 0 2px 6px rgba(244, 114, 182, 0.4);
+}
+
+/* ===================================================
+   3. MAIN CONTENT LAYOUT
+   =================================================== */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #831843;
+}
+
+.page-title h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(251, 207, 232, 0.8);
+}
+
+/* Section Common Styles */
+section {
+    margin-bottom: 3rem;
+}
+
+/* Responsive Image[cite: 3, 5] */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Button Styles (สไตล์ปุ่มเยลลี่) */
+.btn {
+    display: inline-block;
+    background-color: #f472b6;
+    color: #ffffff;
+    padding: 0.6rem 1.4rem;
+    text-decoration: none;
+    border-radius: 25px; /* มุมโค้งมนกลมสไตล์ขนม */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(244, 114, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #db2777;
+    transform: translateY(-2px); /* ลอยขึ้นเบาๆ เมื่อชี้ */
+    box-shadow: 0 6px 12px rgba(219, 39, 119, 0.35);
+}
+
+/* ===================================================
+   4. HOME PAGE (HERO SECTION)[cite: 1]
+   =================================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid #fce7f3;
+    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.1);
+}
+
+.hero-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fbcfe8; /* ขอบรูปสไตล์เค้ก */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    color: #831843;
+}
+
+.hero-text h2 {
+    font-size: 1.3rem;
+    color: #db2777;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.5rem;
+}
+
+/* ===================================================
+   5. ABOUT & SKILLS PAGE[cite: 1]
+   =================================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.8rem;
+    border-radius: 16px;
+    border: 1px solid #fce7f3;
+    box-shadow: 0 4px 15px rgba(244, 114, 182, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.card h2, .card h3 {
+    margin-bottom: 1rem;
+    color: #831843;
+    border-bottom: 2px dashed #fbcfe8; /* เส้นใต้แบบเส้นประคล้ายวิปครีม */
+    padding-bottom: 0.5rem;
+}
+
+.skills-list ul {
+    list-style: none; /* เปลี่ยนรายการเป็นสไตล์กำหนดเอง */
+    padding-left: 0;
+}
+
+.skills-list li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: "🌸"; /* ไอคอนรูปดอกไม้/ขนมหวานนำหน้าข้อความ */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 0.9rem;
+}
+
+/* ===================================================
+   6. PORTFOLIO PAGE[cite: 1]
+   =================================================== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #fce7f3;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(244, 114, 182, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* เอฟเฟกต์ยกตัวเมื่อเลื่อนเมาส์ผ่าน */
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    margin-bottom: 0.5rem;
+    color: #831843;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #6b4c55;
+}
+
+.tech-stack {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #db2777;
+    background-color: #fce7f3; /* พื้นหลังแท็กเทคโนโลยี */
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+/* ===================================================
+   7. CONTACT PAGE[cite: 1]
+   =================================================== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #831843;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #fbcfe8;
+    border-radius: 10px;
+    background-color: #fffafc;
+    font-family: inherit;
+    color: #5c4048;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f472b6; /* ไฮไลต์ขอบช่องกรอกเมื่อคลิกเลือก */
+    box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.2);
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: #db2777;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================
+   8. FOOTER[cite: 1, 3]
+   =================================================== */
+footer {
+    background-color: #fde8ed;
+    color: #835261;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    border-top: 3px solid #fbcfe8;
+    font-size: 0.95rem;
+}
+
+/* ===================================================
+   9. MEDIA QUERIES (RESPONSIVE DESIGN)[cite: 3, 5]
+   =================================================== */
+   @media screen and (max-width: 1024px) and (min-width: 769px) {
+  /* 1. จัดระเบียบ Container หลักให้ขยายพอดีหน้าจอ iPad */
+  .container, 
+  .nav-container, 
+  .hero {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* 2. ปรับการจัดวางส่วน Hero (รูปโปรไฟล์ + ข้อความ) */
+  .hero {
+    display: flex;
+    flex-direction: row; /* จัดเรียงซ้าย-ขวาแบบกะทัดรัด */
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+  }
+
+  /* 3. ปรับขนาดรูปโปรไฟล์บน iPad ให้พอดี */
+  .hero-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* 4. ปรับขนาดฟอนต์ข้อความส่วน Hero */
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* 5. ปรับส่วนผลงาน / การ์ด (ถ้ามีในหน้า portfolio.html) ให้แสดง 2 คอลัมน์ */
+  .portfolio-grid,
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์บน iPad */
+    gap: 20px;
+  }
+  /* ปรับส่วนข้างบนที่เพี้ยนเวลาย่อถึง 811px  */
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  /* 2. ปรับเมนูลิสต์ให้อยู่บรรทัดเดียว และลดระยะห่างระหว่างเมนู */
+  .nav-menu {
+    display: flex;
+    gap: 12px; /* ลดความห่างระหว่างเมนู */
+    align-items: center;
+  }
+
+  /* 3. ปรับขนาดฟอนต์เมนูให้เล็กและกะทัดรัดขึ้น ไม่ให้ตกบรรทัด */
+  .nav-menu a {
+    font-size: 0.9rem;
+    white-space: nowrap; /* ป้องกันข้อความตัดขึ้นบรรทัดใหม่ */
+    padding: 6px 10px;
+  }
+
+  /* 4. ปรับขนาดโลโก้ */
+  .logo {
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+}
+
+    @media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-grid,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* ปรับการ์ดผลงานเป็น 1 คอลัมน์บนมือถือ[cite: 4, 5] */
+    }
+}
