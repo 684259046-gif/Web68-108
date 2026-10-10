@@ -187,7 +187,7 @@ img {
 .card h2, .card h3 {
     margin-bottom: 1rem;
     color: #831843;
-    border-bottom: 2px dashed #fbcfe8; /* เส้นใต้แบบเส้นประคล้ายวิปครีม */
+    border-bottom: 2px dashed #fbcfe8; /* เส้นใต้แบบเส้นประ */
     padding-bottom: 0.5rem;
 }
 
@@ -203,7 +203,7 @@ img {
 }
 
 .skills-list li::before {
-    content: "🌸"; /* ไอคอนรูปดอกไม้/ขนมหวานนำหน้าข้อความ */
+    content: "🌸"; /* ไอคอนรูปดอกไม้นำหน้าข้อความ */
     position: absolute;
     left: 0;
     top: 0;
